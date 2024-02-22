@@ -115,15 +115,15 @@
 
 Both **primary keys** and **unique keys** enforce data uniqueness within a table, but they have distinct roles and constraints:
 
-| Feature | Primary Key | Unique Key |
-|---|---|---|
-| Uniqueness | Guaranteed unique for every row | Ensures unique values within a column/column combo |
-| Null Values | Not allowed | Can have one NULL value |
-| Number per Table | Only one | Can have multiple |
-| Enforced Automatically | Yes | Requires explicit creation (UNIQUE constraint) |
-| Foreign Key Reference | Can be used as a foreign key reference | Cannot be used as a foreign key reference |
-| Indexing | Implicitly creates a unique index (recommended) | Requires creating an index separately |
-| Purpose | Uniquely identify each row | Prevent duplicate values without identifying every row |
+| Feature                | Primary Key                                     | Unique Key                                             |
+| ---------------------- | ----------------------------------------------- | ------------------------------------------------------ |
+| Uniqueness             | Guaranteed unique for every row                 | Ensures unique values within a column/column combo     |
+| Null Values            | Not allowed                                     | Can have one NULL value                                |
+| Number per Table       | Only one                                        | Can have multiple                                      |
+| Enforced Automatically | Yes                                             | Requires explicit creation (UNIQUE constraint)         |
+| Foreign Key Reference  | Can be used as a foreign key reference          | Cannot be used as a foreign key reference              |
+| Indexing               | Implicitly creates a unique index (recommended) | Requires creating an index separately                  |
+| Purpose                | Uniquely identify each row                      | Prevent duplicate values without identifying every row |
 
 ### Key Differences
 
@@ -141,3 +141,39 @@ Both **primary keys** and **unique keys** enforce data uniqueness within a table
 * Consider performance when choosing between multiple unique keys and a single primary key with multiple columns.
 
 
+## Relations: One-to-One, One-to-Many, and Many-to-Many
+
+In database management, relationships define how tables connect and interact with each other to represent real-world entities and their interactions. Three fundamental relationship types exist:
+
+### 1. One-to-One (1:1) Relationship
+
+- A single record in one table is associated with **exactly one** record in another table.
+- This relationship often creates a "mirror" or reference table for additional information related to a primary entity.
+- Example: A `Customer` table might have a 1:1 relationship with a `CustomerAddress` table, storing specific address details.
+
+### 2. One-to-Many (1:M) Relationship
+
+- A single record in one table is associated with **multiple** records in another table.
+- This relationship represents a hierarchical structure where one entity "owns" or manages several related entities.
+- Example: An `Order` table can have a 1:M relationship with an `OrderItem` table, listing individual items within each order.
+
+### 3. Many-to-Many (M:N) Relationship
+
+- Multiple records in one table are associated with **multiple** records in another table.
+- This relationship requires an intermediary table to link them, as a direct connection leads to data redundancy.
+- Example: A `Student` table has an M:N relationship with a `Course` table, connecting students enrolled in various courses.
+
+### Choosing the Right Relationship
+
+Selecting the appropriate relationship type depends on the specific relationship between the entities you're modeling:
+
+- **1:1:** Use when a single unique entity requires additional details stored separately.
+- **1:M:** Opt for this when an entity manages or contains multiple related entities.
+- **M:N:** Choose this when multiple entities have connections with multiple other entities.
+
+### Additional Considerations
+
+- **Foreign Keys:** These enforce referential integrity between tables, ensuring data consistency.
+- **Normalization:** Database design aims to minimize redundancy and maintain data integrity through proper relationships.
+
+I hope this explanation clarifies the different types of relations in databases. Feel free to ask if you have any further questions or specific scenarios you'd like to discuss!

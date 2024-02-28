@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+
+    </style>
+</head>
+
+<body class="flex items-center flex-col">
+    <h1 class="text-3xl font-bold mb-6">User Information Form</h1>
+    <form action="#" class="w-80">
+        <div class="mb-6">
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Name:</label>
+            <input type="text" id="name" name="name" required
+                class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+        </div>
+        <div class="mb-6">
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-700">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required
+                class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+        </div>
+        <div class="mb-6">
+            <label class="block mb-2 text-sm font-medium text-gray-700">Gender:</label>
+            <div class="flex items-center space-x-4">
+                <input type="radio" id="male" name="gender" value="male"
+                    class="w-4 h-4 border-gray-300 focus:ring-blue-500 focus:ring-1 checked:ring-2 checked:bg-blue-500">
+                <label for="male" class="text-sm font-medium text-gray-700">Male</label>
+                <input type="radio" id="female" name="gender" value="female"
+                    class="w-4 h-4 border-gray-300 focus:ring-blue-500 focus:ring-1 checked:ring-2 checked:bg-blue-500">
+                <label for="female" class="text-sm font-medium text-gray-700">Female</label>
+                <input type="radio" id="other" name="gender" value="other"
+                    class="w-4 h-4 border-gray-300 focus:ring-blue-500 focus:ring-1 checked:ring-2 checked:bg-blue-500">
+                <label for="other" class="text-sm font-medium text-gray-700">Other</label>
+            </div>
+        </div>
+        <div class="mb-6">
+            <label class="block mb-2 text-sm font-medium text-gray-700">Hobbies:</label>
+            <div class="flex flex-wrap space-x-4">
+                <input type="checkbox" id="hobby1" name="hobbies[]" value="reading"
+                    class="w-4 h-4 border-gray-300 focus:ring-blue-500 focus:ring-1 checked:ring-2 checked:bg-blue-500">
+                <label for="hobby1" class="text-sm font-medium text-gray-700">Reading</label>
+                <input type="checkbox" id="hobby2" name="hobbies[]" value="sports"
+                    class="w-4 h-4 border-gray-300 focus:ring-blue-500 focus:ring-1 checked:ring-2 checked:bg-blue-500">
+                <label for="hobby2" class="text-sm font-medium text-gray-700">Sports</label>
+                <input type="checkbox" id="hobby3" name="hobbies[]" value="music" class="w-4 h-4 border-gray-300 focus:ring-blue-500 focus">
+        </div>
+        <div class=" mb-6">
+                <label for="technical_track" class="block mb-2 text-sm font-medium text-gray-700">Technical
+                    Track:</label>
+                <select id="technical_track" name="technical_track" required
+                    class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                    <option value="">Select One</option>
+                    <option value="web_development">Web Development</option>
+                    <option value="data_science">Data Science</option>
+                    <option value="mobile_development">Mobile Development</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="cloud_computing">Cloud Computing</option>
+                </select>
+            </div>
+            <div class="mb-6 flex flex-col items-center">
+                <label for="profile_picture" class="mb-2 text-sm font-medium text-gray-700">Profile Picture:</label>
+                <input type="file" id="profile_picture" name="profile_picture" accept="image/*"
+                    class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+            </div>
+            <div class="mb-6 flex flex-col items-center">
+                <label for="cv" class="mb-2 text-sm font-medium text-gray-700">Upload CV:</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.docx"
+                    class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+            </div>
+            <div class="mb-6">
+                <label for="dob" class="block mb-2 text-sm font-medium text-gray-700">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required
+                    class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+            </div>
+            <div class="mb-6 flex flex-col items-center">
+                <label for="intro" class="mb-2 text-sm font-medium text-gray-700">Introduce Yourself (1 minute):</label>
+                <input type="file" id="intro" name="intro" accept="audio/*"
+                    class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+            </div>
+            <div class="flex justify-end">
+                <a href="#"
+                    class="inline-flex items-center px-4 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Submit
+                </a>
+            </div>
+    </form>
+
+</body>
+
+</html>

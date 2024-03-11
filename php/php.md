@@ -35,3 +35,19 @@ In most cases, both `echo` and `print` can be used interchangeably. However, `ec
 However, **built-in functions are generally case-insensitive** when called. This means that calling `strtoupper()` or `STRTOUPPER()` will have the same effect.
 
 **Note:** It's essential to maintain consistency in case sensitivity to avoid unexpected behavior and potential errors in your code.
+
+
+**Programming vs. Scripting Languages**
+
+* **Programming languages** are general-purpose for building entire software applications. They typically require compilation into machine code for direct execution by the computer. (Examples: C++, Java, C#)
+* **Scripting languages** are often used for smaller tasks or to automate processes within a larger program. They're interpreted at runtime, meaning the code is translated line by line during execution. (Examples: JavaScript, Python, Ruby)
+
+**Dynamically vs. Statically Typed Languages**
+
+* **Dynamically typed languages** determine data types at runtime, providing flexibility but potentially leading to runtime errors if incorrect data types are used. (Examples: JavaScript, Python)
+* **Statically typed languages** require data types to be declared upfront, ensuring type safety and catching errors during compilation. (Examples: Java, C#)
+
+**Pass-by-Value vs. Pass-by-Reference**
+
+* **Pass-by-value** creates a copy of the variable being passed to a function. Changes made within the function don't affect the original variable. (Common in C++, Java)
+* **Pass-by-reference** passes the memory address of the variable to the function. Changes made within the function directly modify the original variable. (Common in C, C++)

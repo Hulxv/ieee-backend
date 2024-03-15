@@ -51,3 +51,84 @@ However, **built-in functions are generally case-insensitive** when called. This
 
 * **Pass-by-value** creates a copy of the variable being passed to a function. Changes made within the function don't affect the original variable. (Common in C++, Java)
 * **Pass-by-reference** passes the memory address of the variable to the function. Changes made within the function directly modify the original variable. (Common in C, C++)
+
+
+
+
+
+**Loops in PHP**
+
+Loops are a cornerstone of efficient programming in PHP, enabling you to execute a block of code repeatedly until a specific condition is met. This eliminates the need to write the same code multiple times, promoting code readability and maintainability.
+
+**Common Loop Types in PHP:**
+
+1. **for Loop:**
+   - Ideal when you know the exact number of iterations required.
+   - Syntax:
+     ```php
+     for ($initialization; $condition; $increment) {
+         // Code to be executed in each iteration
+     }
+     ```
+   - Breakdown:
+     - `$initialization`: Executed once at the beginning, typically used to initialize a loop counter.
+     - `$condition`: Evaluated before each iteration. The loop continues as long as `$condition` evaluates to TRUE.
+     - `$increment`: Executed after each iteration, often used to update the loop counter.
+   - Example:
+     ```php
+     for ($i = 0; $i < 5; $i++) {
+         echo "Number: $i <br>";
+     }
+     ```
+
+2. **while Loop:**
+   - Executes a block of code as long as a specified condition is TRUE.
+   - Syntax:
+     ```php
+     while ($condition) {
+         // Code to be executed in each iteration
+     }
+     ```
+   - Example:
+     ```php
+     $x = 1;
+     while ($x <= 3) {
+         echo "Number: $x <br>";
+         $x++;
+     }
+     ```
+
+3. **do...while Loop:**
+   - Ensures the code block executes at least once, followed by subsequent iterations as long as a condition is TRUE.
+   - Syntax:
+     ```php
+     do {
+         // Code to be executed in each iteration
+     } while ($condition);
+     ```
+   - Example:
+     ```php
+     $y = 0;
+     do {
+         echo "Number: $y <br>";
+         $y++;
+     } while ($y < 3);
+     ```
+
+4. **foreach Loop:**
+   - Designed specifically for iterating over arrays. It automatically assigns each element of the array to a variable during each iteration.
+   - Syntax:
+     ```php
+     foreach ($array as $value) {
+         // Code to be executed for each element
+     }
+     ```
+   - Example:
+     ```php
+     $fruits = ["apple", "banana", "orange"];
+     foreach ($fruits as $fruit) {
+         echo "Fruit: $fruit <br>";
+     }
+     ```
+
+
